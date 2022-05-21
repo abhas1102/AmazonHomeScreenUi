@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    tools:ignore="MissingClass">
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/ll2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_location" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deliver to "
+            android:textColor="@color/purple_200"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/name_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="Deliver to"
+            android:textColor="@color/purple_200"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/user_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:maxLength="6"
+            android:textColor="@color/purple_200"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/post_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:textColor="@color/purple_200"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/button_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_refresh" />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="LinearLayoutManager" />
+
+    </LinearLayout>
+
+<ImageView
+    android:id="@+id/banner_mobilelaunch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/redmilaunch"
+    android:outlineAmbientShadowColor="@color/teal_700"
+    app:layout_constraintTop_toBottomOf="@+id/ll2"
+    android:scaleType="fitXY"
+    app:layout_constraintEnd_toStartOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner_mobilelaunch">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="LinearLayoutManager" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/banner_insurance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/insurance_image"
+        android:outlineAmbientShadowColor="@color/teal_700"
+        app:layout_constraintTop_toBottomOf="@+id/ll3"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
